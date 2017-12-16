@@ -26,8 +26,8 @@ namespace Hung_Tuong_LVTN
         public UCNV b ;
         public UCBatDongSan c;
         public UCHDKyGui d;
-        DocumentPanel panel = new DocumentPanel();
-        Frame fr = new Frame();
+        //DocumentPanel panel = new DocumentPanel();
+        //Frame fr = new Frame();
         public MainWindow()
         {
             InitializeComponent();
@@ -48,10 +48,7 @@ namespace Hung_Tuong_LVTN
             biBDS.IsEnabled = true;
             lpmenu.IsEnabled = true;
             biKG.IsEnabled = true;
-            if (docGroup.Items.Count >= 2)
-            {
-                docGroup.Items.Remove(panel);
-            }
+           
         }
 
         private void biKH_ItemClick(object sender, DevExpress.Xpf.Bars.ItemClickEventArgs e)
@@ -64,10 +61,7 @@ namespace Hung_Tuong_LVTN
             nbiDetail.IsEnabled = false;
             biBDS.IsEnabled = true;
             biKG.IsEnabled = true;
-            if (docGroup.Items.Count >= 2)
-            {
-                docGroup.Items.Remove(panel);
-            }
+          
             doc.DockController.Hide(lpmenu);
         }
 
@@ -102,14 +96,11 @@ namespace Hung_Tuong_LVTN
             nbiList.IsEnabled = false;
             nbiDetail.IsEnabled = false;
             biKG.IsEnabled = true;
-            fr.Content = new BDSChiTiet();
-            panel.Caption = "Chi Tiết BĐS";
-            panel.AllowClose = false;
-            panel.Content = fr;
-            if (docGroup.Items.Count < 2)
-            {
-                docGroup.Items.Add(panel);
-            }
+            //fr.Content = new BDSChiTiet();
+            //panel.Caption = "Chi Tiết BĐS";
+            //panel.AllowClose = false;
+            //panel.Content = fr;
+           
             doc.DockController.Hide(lpmenu);
         }
 
@@ -129,10 +120,7 @@ namespace Hung_Tuong_LVTN
             biKH.IsEnabled = true;
             biNV.IsEnabled = true;
             biBDS.IsEnabled = true;
-            if (docGroup.Items.Count == 2)
-            {
-                docGroup.Items.Remove(panel);
-            }
+           
         }
     }
 }

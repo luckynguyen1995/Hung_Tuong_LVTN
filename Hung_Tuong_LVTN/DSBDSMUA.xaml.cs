@@ -21,6 +21,7 @@ namespace Hung_Tuong_LVTN
     public partial class DSBDSMUA : Window
     {
         private BDSModelView bds = new BDSModelView();
+        databaseDataContext dc = new databaseDataContext();
         public DSBDSMUA()
         {
             InitializeComponent();
@@ -31,11 +32,31 @@ namespace Hung_Tuong_LVTN
 
         private void grid_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            BatDongSan a = grid.SelectedItem as BatDongSan;
-            frmThemHDDC.stringbdsid = a.bdsid.ToString();
-            frmThemHDDC frm = new frmThemHDDC();
-            frm.Show();
+           
             this.Close();
+        }
+
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            BatDongSan a = grid.SelectedItem as BatDongSan;
+            var window = Application.Current.Windows.OfType<frmThemHDCN>().SingleOrDefault(w => w.IsActive);
+            var window1 = Application.Current.Windows.OfType<frmThemHDDC>().SingleOrDefault(w => w.IsActive);
+            if (window != null)
+            {
+                //for (int i = 0; i < dc.KhachHangs.Count(); i++)
+                //{
+                //    if (dc.KhachHangs.ToList()[i].khid == a.khid)
+                //    {
+                //        window.cboKH1.SelectedIndex = i;
+                //        break;
+                //    }
+                //}
+            }
+            if (window1 != null)
+            {
+                window1.stringbdsid = a.bdsid.ToString();
+                window1.load();
+            }
         }
     }
 }

@@ -1,0 +1,134 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Hung_Tuong_LVTN"
+         xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" 
+        xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol" 
+        xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" 
+        xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars"
+        xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"
+        xmlns:Models="clr-namespace:Hung_Tuong_LVTN.Models" x:Class="Hung_Tuong_LVTN.frmThemHDCN"
+        mc:Ignorable="d"
+        Title="THÊM HỢP ĐỒNG CHUYỂN NHƯỢNG" Height="600" Width="1000">
+    <Window.DataContext>
+        <Models:HDCNModelView/>
+    </Window.DataContext>
+    <Grid>
+        <dxlc:LayoutGroup Padding="20,10,20,0">
+            <dxlc:LayoutControl Orientation="Vertical">
+                <dxlc:LayoutControl Padding="0" Height="100" >
+                    <Image Width="100" Height="100" Source="pack://application:,,,/Hung_Tuong_LVTN;component/img/logo chuan.jpg" VerticalAlignment="Top" Margin="30,0,0,0"/>
+                    <Label Content="Hợp Đồng Chuyển Nhượng" FontWeight="Bold" FontSize="30" Foreground="#FF73718B"  VerticalAlignment="Center"  HorizontalAlignment="Left"/>
+                </dxlc:LayoutControl>
+                <dxlc:LayoutControl Orientation="Horizontal" VerticalAlignment="Top">
+                    <dxlc:LayoutGroup View="GroupBox" Header="Bên Chuyển Nhượng"  Orientation="Vertical" x:Name="layout1"  Background="#FFFBF7F7">
+                        <dxlc:LayoutGroup  Orientation="Horizontal" Height="35">
+                            <dxlc:LayoutItem Label="Chọn Khách Hàng: " Height="32" VerticalAlignment="Stretch"
+                            HorizontalAlignment="Left" >
+                                <ComboBox x:Name="cboKH1" Width="200" HorizontalAlignment="Left" SelectionChanged="cboKH2_SelectionChanged" ItemsSource="{Binding DSKhachHang}" DisplayMemberPath="hoten"/>
+                            </dxlc:LayoutItem>
+                            <Button x:Name="btnTim1"  Click="btnTim1_Click" HorizontalAlignment="Left">
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Source="{dx:DXImage Image=Lookup&amp;Reference_32x32.png}" />
+                                </StackPanel>
+                            </Button>
+                        </dxlc:LayoutGroup>
+                        <dxlc:LayoutItem Label="Họ Tên: " HorizontalAlignment="Left">
+                            <Label x:Name="lblHoten" HorizontalAlignment="Left"/>
+                        </dxlc:LayoutItem>
+                        <dxlc:LayoutItem Label="CMND Số: " HorizontalAlignment="Left">
+                            <Label x:Name="lblCmnd" HorizontalAlignment="Left"/>
+                        </dxlc:LayoutItem>
+                        <dxlc:LayoutItem Label="Ngày Sinh: " HorizontalAlignment="Left">
+                            <Label x:Name="lblNgaySinh" HorizontalAlignment="Left"/>
+                        </dxlc:LayoutItem>
+                        <dxlc:LayoutItem Label="Địa Chỉ Thường Trú: " HorizontalAlignment="Left">
+                            <Label x:Name="lblThuongTru" HorizontalAlignment="Left"/>
+                        </dxlc:LayoutItem>
+                        <dxlc:LayoutItem Label="Địa Chỉ Liên Lạc: " HorizontalAlignment="Left">
+                            <Label x:Name="lblDiaChi" HorizontalAlignment="Left"/>
+                        </dxlc:LayoutItem>
+
+
+
+                    </dxlc:LayoutGroup>
+                    <dxlc:LayoutGroup View="GroupBox" Header="Bên Nhận Chuyển Nhượng"  Orientation="Vertical" x:Name="layout1_Copy"  Background="#FFFBF7F7">
+                        <dxlc:LayoutGroup  Orientation="Horizontal" Height="35">
+                            <dxlc:LayoutItem Label="Chọn Khách Hàng: " Height="32" VerticalAlignment="Stretch"
+                            HorizontalAlignment="Left" >
+                                <ComboBox x:Name="cboKH2" Width="200" HorizontalAlignment="Left" SelectionChanged="cboKH2_SelectionChanged" ItemsSource="{Binding DSKhachHang}" DisplayMemberPath="hoten"/>
+                            </dxlc:LayoutItem>
+                            <Button x:Name="btnReload2"   HorizontalAlignment="Left">
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Source="{dx:DXImage Image=Lookup&amp;Reference_32x32.png}" />
+                                </StackPanel>
+                            </Button>
+                            <Button x:Name="btnThemKH"   HorizontalAlignment="Left">
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Source="{dx:DXImage Image=Add_32x32.png}" />
+                                    <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center"><Run Text="Mới"/></TextBlock>
+                                </StackPanel>
+                            </Button>
+
+                        </dxlc:LayoutGroup>
+
+                        <dxlc:LayoutItem Label="Họ Tên: " HorizontalAlignment="Left">
+                            <Label x:Name="lblHoten1" HorizontalAlignment="Left"/>
+                        </dxlc:LayoutItem>
+                        <dxlc:LayoutItem Label="CMND Số: " HorizontalAlignment="Left">
+                            <Label x:Name="lblCmnd1"  Width="150" HorizontalAlignment="Left"/>
+                        </dxlc:LayoutItem>
+                        <dxlc:LayoutItem Label="Ngày Sinh: " HorizontalAlignment="Left">
+                            <Label x:Name="lblNgaySinh1" HorizontalAlignment="Left"/>
+                        </dxlc:LayoutItem>
+                        <dxlc:LayoutItem Label="Địa Chỉ Thường Trú: " HorizontalAlignment="Left">
+                            <Label x:Name="lblThuongTru1" HorizontalAlignment="Left"/>
+                        </dxlc:LayoutItem>
+                        <dxlc:LayoutItem Label="Địa Chỉ Liên Lạc: " HorizontalAlignment="Left">
+                            <Label x:Name="lblDiaChi1" HorizontalAlignment="Left"/>
+                        </dxlc:LayoutItem>
+
+                    </dxlc:LayoutGroup>
+                </dxlc:LayoutControl>
+                <dxlc:LayoutControl Orientation="Horizontal">
+                    <dxlc:LayoutGroup Header="Thông Tin Bất Động Sản" View="GroupBox" HorizontalAlignment="Left" Orientation="Vertical">
+                        <dxlc:LayoutItem Label="Diện Tích: ">
+                            <Label Width="200"/>
+                        </dxlc:LayoutItem>
+                        <dxlc:LayoutItem Label="Loại BĐS: ">
+                            <Label Width="200"/>
+                        </dxlc:LayoutItem>
+                        <dxlc:LayoutItem Label="Giá Trị:">
+                            <Label Width="200"/>
+                        </dxlc:LayoutItem>
+                        <dxlc:LayoutItem Label="Vị trí: ">
+                            <Label Width="200"/>
+                        </dxlc:LayoutItem>
+
+                    </dxlc:LayoutGroup>
+                    <dxlc:LayoutGroup Header="Hợp Đồng Đặt Cọc" View="GroupBox" Orientation="Vertical" HorizontalAlignment="Left">
+                        <dxlc:LayoutItem Label="Số tiền: ">
+                            <Label Width="200"/>
+                        </dxlc:LayoutItem>
+                        <dxlc:LayoutItem Label="Thời Hạn: ">
+                            <Label Width="200"/>
+                        </dxlc:LayoutItem>
+                        <dxlc:LayoutItem Label="Ngày Lập: ">
+                            <Label Width="200"/>
+                        </dxlc:LayoutItem>
+                        <dxlc:LayoutItem Label="Ngày TT: ">
+                            <Label Width="200"/>
+                        </dxlc:LayoutItem>
+                    </dxlc:LayoutGroup>
+
+                </dxlc:LayoutControl>
+
+
+
+            </dxlc:LayoutControl>
+        </dxlc:LayoutGroup>
+
+    </Grid>
+</Window>

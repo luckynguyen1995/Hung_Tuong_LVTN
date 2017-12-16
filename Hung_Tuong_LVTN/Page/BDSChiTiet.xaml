@@ -11,6 +11,7 @@
       Title="CHI TIẾT BẤT ĐỘNG SẢN">
 
     <Grid Name="LayoutRoot">
+       
         <Grid.DataContext>
             <local:BatDongSanModel/>
         </Grid.DataContext>
@@ -34,7 +35,7 @@
                 <Image IsEnabled="{Binding Converter={StaticResource ListingPositionToBoolConverter}, ConverterParameter=IsNotFirst}"
                        Source="{dx:DXImage Image=Backward_32x32.png}"/>
             </Button>
-            <Button x:Name="btnNext" Margin="5,0,0,0" Click="btnNext_Click"
+            <Button x:Name="btnNext" Margin="5,0,0,0" Click="btnNext_Click" 
                     IsEnabled="{Binding Converter={StaticResource ListingPositionToBoolConverter}, ConverterParameter=IsNotLast}"
                     >
                 <Image Source="{dx:DXImage Image=Forward_32x32.png}"  />

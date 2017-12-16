@@ -32,10 +32,10 @@ namespace Hung_Tuong_LVTN
 
         private void btnthoat_Click(object sender, RoutedEventArgs e)
         {
-            frmNVdangnhap.stringnvid = manvkh;
-            frmNVdangnhap frm = new frmNVdangnhap();
+            //frmNVdangnhap.stringnvid = manvkh;
+            //frmNVdangnhap frm = new frmNVdangnhap();
 
-            frm.Show();
+            //frm.Show();
             this.Close();
         }
 
@@ -87,7 +87,7 @@ namespace Hung_Tuong_LVTN
                 txtsdt.Focus();
                 return;
             }
-            if (IsNumber(txtcmnd.Text) != true ||txtsdt.Text.Length !=9)
+            if (IsNumber(txtcmnd.Text) != true ||txtcmnd.Text.Length !=9)
             {
                 MessageBox.Show("Vui lòng nhập đúng [CMND] !", "Thông Báo", MessageBoxButton.OK, MessageBoxImage.Error);
                 txtcmnd.Focus();

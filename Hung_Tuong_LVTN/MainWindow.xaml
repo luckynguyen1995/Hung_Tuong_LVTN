@@ -9,11 +9,14 @@
     xmlns:dxn="http://schemas.devexpress.com/winfx/2008/xaml/navbar"
         xmlns:local="clr-namespace:Hung_Tuong_LVTN"
         mc:Ignorable="d"
-        Title="TRANG CHỦ" Height="auto" Width="auto" WindowState="Maximized" WindowStartupLocation="CenterScreen" Icon="{dx:DXImage Image=LoadTheme_32x32.png}">
+        Title="TRANG CHỦ"  WindowState="Maximized" WindowStartupLocation="CenterScreen" Icon="{dx:DXImage Image=LoadTheme_32x32.png}">
     <Grid>
         <DockPanel >
             <Border   DockPanel.Dock="Top"   >
-                <dxb:ToolBarControl Caption="Edit" DockPanel.Dock="Top" IsCollapsed="False" RotateWhenVertical="False" AllowQuickCustomization="True" AllowHide="False" AllowCustomizationMenu="False" BarItemDisplayMode="ContentAndGlyph" FontWeight="Bold" FontSize="14"  OpacityMask="Black" BorderThickness="2" HorizontalAlignment="Left" Width="1400">
+                <dxb:ToolBarControl Caption="Edit" DockPanel.Dock="Top" IsCollapsed="False" RotateWhenVertical="False"
+                                    AllowQuickCustomization="True" AllowHide="False" AllowCustomizationMenu="False"
+                                    BarItemDisplayMode="ContentAndGlyph" FontWeight="Bold" FontSize="14"  
+                                    OpacityMask="Black" BorderThickness="2">
                     <dxb:BarButtonItem x:Name="biNV" Content="Nhân Viên" LargeGlyph="{dx:DXImage Image=Female_32x32.png}" Glyph="{dx:DXImage Image=Female_16x16.png}" ItemClick="biNV_ItemClick" GlyphAlignment="Top"/>
                     <dxb:BarItemSeparator/>
                     <dxb:BarButtonItem x:Name="biKH" Content="Khách Hàng" Glyph="{dx:DXImage Image=Cut_16x16.png}" LargeGlyph="{dx:DXImage Image=Team_32x32.png}" ItemClick="biKH_ItemClick" GlyphAlignment="Top"  />

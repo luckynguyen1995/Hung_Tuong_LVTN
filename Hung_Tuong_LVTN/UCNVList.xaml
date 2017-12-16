@@ -30,7 +30,7 @@
                 <dxg:GridControl.View>
                     <dxg:TableView  x:Name="tableView" AllowPerPixelScrolling="True" 
                                EditFormColumnCount="3" EditFormShowMode="Inline" RowUpdated="tableView_RowUpdated" 
-                                NavigationStyle="Row"  AllowMoveColumnToDropArea="False"
+                                NavigationStyle="Row"  AllowMoveColumnToDropArea="False" ShowTotalSummary="True"
                                     AutoWidth="True"
                                 ShowEditFormOnDoubleClick="False" ShowEditFormOnEnterKey="True"
                                  />

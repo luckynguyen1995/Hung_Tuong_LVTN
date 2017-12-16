@@ -82,6 +82,9 @@
     <Compile Include="DangNhap.xaml.cs">
       <DependentUpon>DangNhap.xaml</DependentUpon>
     </Compile>
+    <Compile Include="database.cs">
+      <DependentUpon>database.dbml</DependentUpon>
+    </Compile>
     <Compile Include="DSBDSMUA.xaml.cs">
       <DependentUpon>DSBDSMUA.xaml</DependentUpon>
     </Compile>
@@ -94,6 +97,9 @@
     <Compile Include="frmNVdangnhap.xaml.cs">
       <DependentUpon>frmNVdangnhap.xaml</DependentUpon>
     </Compile>
+    <Compile Include="frmThemHDCN.xaml.cs">
+      <DependentUpon>frmThemHDCN.xaml</DependentUpon>
+    </Compile>
     <Compile Include="frmThemHDDC.xaml.cs">
       <DependentUpon>frmThemHDDC.xaml</DependentUpon>
     </Compile>
@@ -104,6 +110,7 @@
       <DependentUpon>frmThemKH.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\CrpHDDC.cs" />
+    <Compile Include="Models\HDCNModelView.cs" />
     <Compile Include="Models\HDKGModelView.cs" />
     <Compile Include="NVlistKH.xaml.cs">
       <DependentUpon>NVlistKH.xaml</DependentUpon>
@@ -155,6 +162,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="frmNVdangnhap.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmThemHDCN.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

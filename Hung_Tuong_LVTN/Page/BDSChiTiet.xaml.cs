@@ -27,6 +27,13 @@ namespace Hung_Tuong_LVTN.Page
         {
             ActiveListingIndex++;
         }
+        public void show(int Index)
+        {
+            ActiveListingIndex = Index;
+            btnNext.Visibility = Visibility.Hidden;
+            btnBack.Visibility = Visibility.Hidden;
+            btnRefresh.Visibility = Visibility.Hidden;
+        }
         public int ActiveListingIndex
         {
             get { return DanhSachBDS.ds.IndexOf((BatDongSanModel)LayoutRoot.DataContext); }
@@ -67,6 +74,8 @@ namespace Hung_Tuong_LVTN.Page
                 tongtien = String.Format("{0:.##}" + " tỷ", (x.dientich.Value * x.dongia.Value) / 1000000000),
             }).ToList();
         }
+
+     
     }
     public class ListingPositionToBoolConverter : IValueConverter
     {

@@ -1,4 +1,6 @@
-﻿using Hung_Tuong_LVTN.Model;
+﻿using DevExpress.Xpf.Docking;
+using Hung_Tuong_LVTN.Model;
+using Hung_Tuong_LVTN.Page;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,22 +35,72 @@ namespace Hung_Tuong_LVTN
         }
 
 
-        private void Card_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+       
+
+        private void mnXem_Click(object sender, RoutedEventArgs e)
+        {
+            BDSView card = grid.SelectedItem as BDSView;
+            if (card == null) return;
+            frmGallery gallery = new frmGallery();
+            gallery.loadData(card.bdsid);
+            gallery.Show();
+        }
+
+        private void mnSua_Click(object sender, RoutedEventArgs e)
         {
             BDSView card = grid.SelectedItem as BDSView;
             if (card == null) return;
             eBDS = new SuaBDS();
             eBDS.setBDS(card.bdsid);
             eBDS.Show();
-
         }
-        private void Card_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
+        public int vitri(int id)
+        {
+            int i=0;
+            foreach (BatDongSan bds in dc.BatDongSans)
+            {
+                if (id == bds.bdsid)
+                {
+                    return i;
+                }i++;
+            }
+            return i;
+        }
+        private void mnChiTiet_Click(object sender, RoutedEventArgs e)
         {
             BDSView card = grid.SelectedItem as BDSView;
-            frmGallery gallery = new frmGallery();
-            gallery.loadData(card.bdsid);
-            gallery.Show();
+            if (card == null) return;
+            int x = vitri(card.bdsid);
+           
+                var window = Application.Current.Windows.OfType<MainWindow>().SingleOrDefault(w => w.IsActive);
+                DocumentPanel panel = new DocumentPanel();
+                Frame fr = new Frame();
+            BDSChiTiet chitiet= new BDSChiTiet();
+            chitiet.show(x);
+                fr.Content = chitiet;
+                panel.Caption ="BDSID: "+ card.bdsid;
+                panel.Content = fr;
+                window.docGroup.Items.Add(panel);
+           
         }
 
+       
+
+        private void mnChiTietAll_Click(object sender, RoutedEventArgs e)
+        {
+            var window = Application.Current.Windows.OfType<MainWindow>().SingleOrDefault(w => w.IsActive);
+            DocumentPanel panel = new DocumentPanel();
+            Frame fr = new Frame();
+            BDSChiTiet chitiet = new BDSChiTiet();
+            fr.Content = chitiet;
+            panel.Caption = "Chi Tiết BĐS";
+            panel.Content = fr;
+            window.docGroup.Items.Add(panel);
+        }
+
+        private void mnRefresh_Click(object sender, RoutedEventArgs e)
+        {
+            grid.ItemsSource = new BDSModelView().DSBDS;
+        }
     }
 }

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Hung_Tuong_LVTN"
         xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid" xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" x:Class="Hung_Tuong_LVTN.DSKHMUA"
-        mc:Ignorable="d"
+        mc:Ignorable="d" Closed="Window_Closed"
         Title="Chọn Khách Hàng" WindowStartupLocation="CenterScreen" Icon="{dx:DXImage Image=BOPerson_32x32.png}">
     <Window.Resources>
         <dx:LinqSimpleDataSource x:Key="LinqSimpleDataSource" ContextType="{x:Type local:databaseDataContext}" Path="KhachHangs">

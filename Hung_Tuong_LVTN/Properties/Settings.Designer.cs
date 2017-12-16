@@ -32,5 +32,16 @@ namespace Hung_Tuong_LVTN.Properties {
                 return ((string)(this["QLBDSLVTNConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=RYANNGUYEN\\RYANNGUYEN;Initial Catalog=REManagement;Integrated Securit" +
+            "y=True")]
+        public string REManagementConnectionString {
+            get {
+                return ((string)(this["REManagementConnectionString"]));
+            }
+        }
     }
 }

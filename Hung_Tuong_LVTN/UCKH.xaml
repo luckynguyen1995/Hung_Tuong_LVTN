@@ -13,7 +13,7 @@
             <Label  Content="Danh Sách Khách Hàng" FontWeight="Bold" FontSize="14" VerticalAlignment="Top"/>
             <dxg:GridControl Name="gridkh" ItemsSource="{Binding DSKH}" >
                 <dxg:GridControl.View>
-                    <dxg:TableView AutoWidth="True" AllowEditing="False" />
+                    <dxg:TableView AutoWidth="True" AllowEditing="False" ShowTotalSummary="True"/>
                 </dxg:GridControl.View>
                 <dxg:GridColumn FieldName="hoten" Header="Họ Tên"/>
                 <dxg:GridColumn FieldName="gioitinh" Header="Giới Tính"/>

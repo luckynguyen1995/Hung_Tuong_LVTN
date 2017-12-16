@@ -22,15 +22,14 @@ namespace Hung_Tuong_LVTN
     /// </summary>
     public partial class frmThemHDDC : Window
     {
-        public static string stringkhid = string.Empty;
-        public static string stringbdsid = string.Empty;
+        public string stringkhid = string.Empty;
+        public string stringbdsid = string.Empty;
         private databaseDataContext dc = new databaseDataContext();
         private KhachHangModelView khmd = new KhachHangModelView();
         private BDSModelView bdsview = new BDSModelView();
         private List<CrpHDDC> lst = new List<CrpHDDC>();
-        public frmThemHDDC()
+        public void load()
         {
-            InitializeComponent();
             if (stringkhid != "")
             {
                 KhachHang a = khmd.timkhachhang(int.Parse(stringkhid));
@@ -49,28 +48,31 @@ namespace Hung_Tuong_LVTN
                 lbchieurong.Content = bds.chieurong;
                 lbdientich.Content = bds.dientich;
 
-                lbtonggiatri.Content = bds.dientich * bds.dongia + ".000.000  VNĐ";
+                lbtonggiatri.Content = bds.dientich * bds.dongia + "  VNĐ";
                 //khách hàng bán:
                 lbtennb.Content = bds.KhachHang.hoten;
                 lbcmndnb.Content = bds.KhachHang.cmnd;
                 lbdiachinb.Content = bds.KhachHang.diachitt;
                 lbsdtnb.Content = bds.KhachHang.sdt;
-                lbtiencoc.Content = bds.dientich * bds.dongia * 10 / 100 + ".000.000  VNĐ";
+                lbtiencoc.Content = (bds.dientich * bds.dongia )* 0.3 + " VNĐ";
             }
+        }
+        public frmThemHDDC()
+        {
+            InitializeComponent();
+           
         }
 
         private void Image_MouseDown(object sender, MouseButtonEventArgs e)
         {
             DSKHMUA a = new DSKHMUA();
             a.Show();
-            this.Close();
         }
 
         private void Image_MouseDown2(object sender, MouseButtonEventArgs e)
         {
             DSBDSMUA a = new DSBDSMUA();
             a.Show();
-            this.Close();
         }
 
         private void btnThem_Click(object sender, RoutedEventArgs e)
