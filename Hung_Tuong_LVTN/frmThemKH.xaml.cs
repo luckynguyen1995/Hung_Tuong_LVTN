@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Hung_Tuong_LVTN.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,7 +22,7 @@ namespace Hung_Tuong_LVTN
     
     public partial class frmThemKH : Window
     {
-        public static string manvkh = string.Empty;
+        public static string manvkh = "1";
         databaseDataContext dc = new databaseDataContext();
         public frmThemKH()
         {
@@ -41,8 +42,6 @@ namespace Hung_Tuong_LVTN
 
         private void btnThem_Click(object sender, RoutedEventArgs e)
         {
-            try
-            {
                 kiemtra();
                 KhachHang kh = new KhachHang();
                 kh.hoten = txtname.Text;
@@ -60,13 +59,12 @@ namespace Hung_Tuong_LVTN
                 kh.nvid = int.Parse(manvkh);
                 dc.KhachHangs.InsertOnSubmit(kh);
                 dc.SubmitChanges();
-                frmNVdangnhap.stringnvid = manvkh;
-                frmNVdangnhap frm = new frmNVdangnhap();
+                //frmNVdangnhap.stringnvid = manvkh;
+                //frmNVdangnhap frm = new frmNVdangnhap();
 
-                frm.Show();
+                //frm.Show();
                 this.Close();
-            }
-            catch { return; }
+           
         }
         private void kiemtra()
         {
@@ -100,6 +98,12 @@ namespace Hung_Tuong_LVTN
         {
             Regex regex = new Regex(@"^[-+]?[0-9]*\.?[0-9]+$");
             return regex.IsMatch(pText);
+        }
+
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            var window = Application.Current.Windows.OfType<frmThemHDCN>().SingleOrDefault(w => w.IsActive);
+            window.cboKH2.ItemsSource = new HDCNModelView().DSKhachHang;
         }
     }
 }

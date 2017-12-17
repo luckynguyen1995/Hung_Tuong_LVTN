@@ -49,7 +49,7 @@ namespace Hung_Tuong_LVTN
                 {
                     if (dc.KhachHangs.ToList()[i].khid == a.khid)
                     {
-                        window.cboKH1.SelectedIndex = i;
+                        window.cboKH2.SelectedIndex = i;
                         break;
                     }
                 }

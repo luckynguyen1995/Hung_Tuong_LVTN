@@ -10,7 +10,7 @@
         xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"
         xmlns:local="clr-namespace:Hung_Tuong_LVTN"
         mc:Ignorable="d"
-        Title="Add Customer" Height="730" Width="650" Icon="pack://application:,,,/Hung_Tuong_LVTN;component/img/Ampeross-Qetto-2-Add-contact.ico" WindowStartupLocation="CenterScreen">
+        Title="Add Customer" Closed="Window_Closed" Height="730" Width="700" Icon="pack://application:,,,/Hung_Tuong_LVTN;component/img/Ampeross-Qetto-2-Add-contact.ico" WindowStartupLocation="CenterScreen">
     <Grid>
         <dxlc:LayoutGroup Padding="40,20,40,0">
             <dxlc:LayoutControl Orientation="Vertical">

@@ -130,6 +130,9 @@
     <Compile Include="UCBatDongSan.xaml.cs">
       <DependentUpon>UCBatDongSan.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UCHDChuyenNhuong.xaml.cs">
+      <DependentUpon>UCHDChuyenNhuong.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UCHDDC.xaml.cs">
       <DependentUpon>UCHDDC.xaml</DependentUpon>
     </Compile>
@@ -219,6 +222,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UCBatDongSan.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCHDChuyenNhuong.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

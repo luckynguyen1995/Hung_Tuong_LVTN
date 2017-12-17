@@ -43,14 +43,14 @@ namespace Hung_Tuong_LVTN
             var window1 = Application.Current.Windows.OfType<frmThemHDDC>().SingleOrDefault(w => w.IsActive);
             if (window != null)
             {
-                //for (int i = 0; i < dc.KhachHangs.Count(); i++)
-                //{
-                //    if (dc.KhachHangs.ToList()[i].khid == a.khid)
-                //    {
-                //        window.cboKH1.SelectedIndex = i;
-                //        break;
-                //    }
-                //}
+                for (int i = 0; i < dc.BatDongSans.Where(x=>x.tinhtrang==1).Count(); i++)
+                {
+                    if (dc.BatDongSans.Where(x=>x.tinhtrang==1).ToList()[i].bdsid == a.bdsid)
+                    {
+                        window.cboBDS.SelectedIndex = i;
+                        break;
+                    }
+                }
             }
             if (window1 != null)
             {

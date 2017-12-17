@@ -25,7 +25,7 @@
                     <dxb:BarItemSeparator/>
                     <dxb:BarButtonItem x:Name="biKG" Content="   Ký Gửi   " Glyph="{dx:DXImage Image=Paste_16x16.png}" LargeGlyph="{dx:DXImage Image=Paste_32x32.png}" GlyphAlignment="Top" ItemClick="biKG_ItemClick"/>
                     <dxb:BarItemSeparator/>
-                    <dxb:BarButtonItem x:Name="biHDCN" Content="Chuyển Nhượng" LargeGlyph="{dx:DXImage Image=BOTask_32x32.png}" Glyph="{dx:DXImage Image=BOTask_16x16.png}" GlyphAlignment="Top" />
+                    <dxb:BarButtonItem x:Name="biHDCN" ItemClick="biHDCN_ItemClick" Content="Chuyển Nhượng" LargeGlyph="{dx:DXImage Image=BOTask_32x32.png}" Glyph="{dx:DXImage Image=BOTask_16x16.png}" GlyphAlignment="Top" />
                     <dxb:BarItemSeparator/>
                     <dxb:BarButtonItem x:Name="biHDDC" Content=" Đặt Cọc" GlyphAlignment="Top" LargeGlyph="{dx:DXImage Image=SelectDataMember_32x32.png}" Glyph="{dx:DXImage Image=SelectDataMember_16x16.png}" ItemClick="biHDDC_ItemClick" />
                     <dxb:BarItemSeparator/>

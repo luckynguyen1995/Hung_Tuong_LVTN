@@ -3,6 +3,7 @@ using Hung_Tuong_LVTN.Models;
 using Hung_Tuong_LVTN.RP;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -47,14 +48,16 @@ namespace Hung_Tuong_LVTN
                 lbchieudai.Content = bds.chieudai;
                 lbchieurong.Content = bds.chieurong;
                 lbdientich.Content = bds.dientich;
-
-                lbtonggiatri.Content = bds.dientich * bds.dongia + "  VNĐ";
+                double value =double.Parse( (bds.dongia * bds.dientich).ToString());
+                lbtonggiatri.Content = value.ToString("#,#", CultureInfo.InvariantCulture)+" VNĐ";
                 //khách hàng bán:
+                CultureInfo cul = CultureInfo.GetCultureInfo("vi-VN");
                 lbtennb.Content = bds.KhachHang.hoten;
                 lbcmndnb.Content = bds.KhachHang.cmnd;
                 lbdiachinb.Content = bds.KhachHang.diachitt;
                 lbsdtnb.Content = bds.KhachHang.sdt;
-                lbtiencoc.Content = (bds.dientich * bds.dongia )* 0.3 + " VNĐ";
+                lbtiencoc.Content = (value*0.3).ToString("#,###", cul.NumberFormat) + " VNĐ";
+                //lbtiencoc.Content = String.Format(cul, "{0:c}", value);
             }
         }
         public frmThemHDDC()

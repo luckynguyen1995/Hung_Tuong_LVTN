@@ -152,7 +152,6 @@ C:\Users\RYAN NGUYEN\source\repos\Hung_Tuong_LVTN\Hung_Tuong_LVTN\bin\Debug\DevE
 C:\Users\RYAN NGUYEN\source\repos\Hung_Tuong_LVTN\Hung_Tuong_LVTN\bin\Debug\System.Windows.Interactivity.dll
 C:\Users\RYAN NGUYEN\source\repos\Hung_Tuong_LVTN\Hung_Tuong_LVTN\bin\Debug\DevExpress.Pdf.v17.1.Core.dll
 C:\Users\RYAN NGUYEN\source\repos\Hung_Tuong_LVTN\Hung_Tuong_LVTN\bin\Debug\DevExpress.CodeParser.v17.1.dll
-C:\Users\RYAN NGUYEN\source\repos\Hung_Tuong_LVTN\Hung_Tuong_LVTN\bin\Debug\Microsoft.ReportViewer.Common.dll
 C:\Users\RYAN NGUYEN\source\repos\Hung_Tuong_LVTN\Hung_Tuong_LVTN\bin\Debug\DevExpress.Data.v17.1.xml
 C:\Users\RYAN NGUYEN\source\repos\Hung_Tuong_LVTN\Hung_Tuong_LVTN\bin\Debug\DevExpress.Mvvm.v17.1.xml
 C:\Users\RYAN NGUYEN\source\repos\Hung_Tuong_LVTN\Hung_Tuong_LVTN\bin\Debug\DevExpress.Printing.v17.1.Core.xml
@@ -164,7 +163,6 @@ C:\Users\RYAN NGUYEN\source\repos\Hung_Tuong_LVTN\Hung_Tuong_LVTN\bin\Debug\DevE
 C:\Users\RYAN NGUYEN\source\repos\Hung_Tuong_LVTN\Hung_Tuong_LVTN\bin\Debug\DevExpress.Xpf.Layout.v17.1.Core.xml
 C:\Users\RYAN NGUYEN\source\repos\Hung_Tuong_LVTN\Hung_Tuong_LVTN\bin\Debug\DevExpress.Xpf.LayoutControl.v17.1.xml
 C:\Users\RYAN NGUYEN\source\repos\Hung_Tuong_LVTN\Hung_Tuong_LVTN\bin\Debug\DevExpress.Xpf.NavBar.v17.1.xml
-C:\Users\RYAN NGUYEN\source\repos\Hung_Tuong_LVTN\Hung_Tuong_LVTN\bin\Debug\Microsoft.ReportViewer.WinForms.xml
 C:\Users\RYAN NGUYEN\source\repos\Hung_Tuong_LVTN\Hung_Tuong_LVTN\bin\Debug\System.Windows.Interactivity.xml
 C:\Users\RYAN NGUYEN\source\repos\Hung_Tuong_LVTN\Hung_Tuong_LVTN\bin\Debug\DevExpress.Pdf.v17.1.Core.xml
 C:\Users\RYAN NGUYEN\source\repos\Hung_Tuong_LVTN\Hung_Tuong_LVTN\bin\Debug\de\DevExpress.Data.v17.1.resources.dll
@@ -212,7 +210,6 @@ C:\Users\RYAN NGUYEN\source\repos\Hung_Tuong_LVTN\Hung_Tuong_LVTN\bin\Debug\de\D
 C:\Users\RYAN NGUYEN\source\repos\Hung_Tuong_LVTN\Hung_Tuong_LVTN\bin\Debug\es\DevExpress.Pdf.v17.1.Core.resources.dll
 C:\Users\RYAN NGUYEN\source\repos\Hung_Tuong_LVTN\Hung_Tuong_LVTN\bin\Debug\ja\DevExpress.Pdf.v17.1.Core.resources.dll
 C:\Users\RYAN NGUYEN\source\repos\Hung_Tuong_LVTN\Hung_Tuong_LVTN\bin\Debug\ru\DevExpress.Pdf.v17.1.Core.resources.dll
-C:\Users\RYAN NGUYEN\source\repos\Hung_Tuong_LVTN\Hung_Tuong_LVTN\obj\Debug\Hung_Tuong_LVTN.csprojResolveAssemblyReference.cache
 C:\Users\RYAN NGUYEN\source\repos\Hung_Tuong_LVTN\Hung_Tuong_LVTN\obj\Debug\RP\WindowRPhddc.baml
 C:\Users\RYAN NGUYEN\source\repos\Hung_Tuong_LVTN\Hung_Tuong_LVTN\obj\Debug\DangNhap.g.cs
 C:\Users\RYAN NGUYEN\source\repos\Hung_Tuong_LVTN\Hung_Tuong_LVTN\obj\Debug\DSBDSMUA.g.cs
@@ -265,3 +262,6 @@ C:\Users\RYAN NGUYEN\source\repos\Hung_Tuong_LVTN\Hung_Tuong_LVTN\obj\Debug\RdlC
 C:\Users\RYAN NGUYEN\source\repos\Hung_Tuong_LVTN\Hung_Tuong_LVTN\obj\Debug\RdlCompile.compiled
 C:\Users\RYAN NGUYEN\source\repos\Hung_Tuong_LVTN\Hung_Tuong_LVTN\obj\Debug\frmThemHDCN.g.cs
 C:\Users\RYAN NGUYEN\source\repos\Hung_Tuong_LVTN\Hung_Tuong_LVTN\obj\Debug\frmThemHDCN.baml
+C:\Users\RYAN NGUYEN\source\repos\Hung_Tuong_LVTN\Hung_Tuong_LVTN\obj\Debug\Hung_Tuong_LVTN.csprojResolveAssemblyReference.cache
+C:\Users\RYAN NGUYEN\source\repos\Hung_Tuong_LVTN\Hung_Tuong_LVTN\obj\Debug\UCHDChuyenNhuong.g.cs
+C:\Users\RYAN NGUYEN\source\repos\Hung_Tuong_LVTN\Hung_Tuong_LVTN\obj\Debug\UCHDChuyenNhuong.baml
